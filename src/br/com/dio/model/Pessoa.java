@@ -3,7 +3,7 @@ package br.com.dio.model;
 import java.util.Objects;
 
 public class Pessoa {
-    private String nome;
+    private String nome1;
     private String sobrenome;
     private Integer idade;
 
@@ -11,17 +11,17 @@ public class Pessoa {
     }
 
     public Pessoa(String nome, String sobrenome, Integer idade) {
-        this.nome = nome;
+        this.nome1 = nome;
         this.sobrenome = sobrenome;
         this.idade = idade;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNome1() {
+        return nome1;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome1(String nome1) {
+        this.nome1 = nome1;
     }
 
     public String getSobrenome() {
@@ -45,20 +45,20 @@ public class Pessoa {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pessoa pessoa = (Pessoa) o;
-        return Objects.equals(nome, pessoa.nome) && Objects.equals(sobrenome, pessoa.sobrenome) && Objects.equals(idade, pessoa.idade);
+        return Objects.equals(nome1, pessoa.nome1) && Objects.equals(sobrenome, pessoa.sobrenome) && Objects.equals(idade, pessoa.idade);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, sobrenome, idade);
+        return Objects.hash(nome1, sobrenome, idade);
     }
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", idade=" + idade +
-                '}';
+        return "Seu nome é "
+                 + nome1  +
+                 " " + sobrenome +
+                " e voce tem " + idade +
+                " anos, agora escolha seu livro: ";
     }
 }
